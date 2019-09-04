@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 
-
 app.get('/:params', (req, res) => { 
   console.log(`Received ${req.method} request from ${req.url}`);
   console.log('extra parameters:      ', req.params);
